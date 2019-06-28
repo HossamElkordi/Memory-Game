@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remember The Emoji</title>
+        <link rel = "icon" type = "png" href = "favicon.png">
+        <link rel = "stylesheet" href = "style.css">
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    </head>
+    
+    <body>
+        <div class = "row">
+            <div class = "col-3"> <img src = "logo.png"> </div>
+            <div class = "col-6"> <h1>Remember The Emoji</h1> </div>
+            <div class = "col-3"> <img src = "logo.png"> </div>
+        </div>
+        
+        <div class = "row">
+            <div class = "col-8">
+                <div id = "gameTable"></div>
+                <script>table('gameTable');</script>
+            </div>
+            <div class = "col-4">
+                <div class = "row">
+                    <div class = "col-6"><h3>Pick a size:</h3></div>
+                    <div class = "col-6">
+                      <select id = "sizes"  onchange="createTable(this.id,'gameTable')">
+                            <option value = "66">6*6</option>
+                            <option value = "58">5*8</option>
+                            <option value = "76">7*6</option>
+                            <option value = "86">8*6</option>
+                            <option value = "87">8*7</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class = "row">
+                    <div class="col-12">
+                        <h3 id="time"></h3>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

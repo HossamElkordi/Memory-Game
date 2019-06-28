@@ -1,0 +1,111 @@
+body {
+    background-color: #35302f;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+.row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+*{
+    box-sizing: border-box;
+}
+
+.col-3 img {
+    margin: auto;
+    display: block;
+}
+
+.col-6 h1{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 40px;
+}
+
+.col-6 h3 {
+    text-align: right;
+    color: white;
+    font-size: 20px;
+}
+.col-6 select {
+    
+    display: inline;
+    margin-left: 10px;
+    margin-top: 12%;
+    width: 100px;
+    text-align-last: center;
+    border-radius: 3px;
+}
+.col-6 #select option {
+   padding: 50%;
+}
+.col-12 #time{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+table {
+    margin: auto;
+    
+}
+tr {
+    width: 100%;
+}
+td {
+    padding: 1px;
+    
+}
+
+.card{
+    width:42px;
+    height: 61px;
+    
+}
+
+.content{
+    width: 42px;
+    height: 61px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    transition: transform 0.5s;
+    background: none;
+    transform-style: preserve-3d;
+}
+.front , .back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+.front{
+    transform: rotateY(0.5turn);
+}
+
+.front img,
+.back img {
+    border-radius: 4px;
+}
