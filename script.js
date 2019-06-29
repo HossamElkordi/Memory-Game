@@ -107,6 +107,8 @@ function cover(){
         backFlip(second);
     }else{
         matches ++;
+        document.getElementById(first).setAttribute('onclick','');
+        document.getElementById(second).setAttribute('onclick','');
     }
     flipped = 0;
 }
