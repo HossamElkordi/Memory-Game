@@ -75,6 +75,9 @@ function table(gameTable){
 }
 
 function flip (cardContent){
+    if (flipped >= 2){
+        return;
+    }
       started ++;
       if (started == 1){
           restartAndSolve();
@@ -99,19 +102,19 @@ function cover(){
     var first = flippedCards.pop();
     var index2 = first.substring((first.indexOf('-')+1),(first.length));
     
-    if(board[index1-1] != board[index2-1]){
+    if((board[index1-1] != board[index2-1]) || (index1-1 == index2-1)){
         backFlip(first);
         backFlip(second);
     }else{
         matches ++;
     }
+    flipped = 0;
 }
 
 function game (){
     if(flipped != 2){
         return;
     }
-    flipped = 0;
     window.setTimeout(cover,600);   
 }
 
