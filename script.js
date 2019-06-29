@@ -77,6 +77,7 @@ function table(gameTable){
 function flip (cardContent){
       started ++;
       if (started == 1){
+          restartAndSolve();
           timer();
       }
       var content = document.getElementById(cardContent);
@@ -134,4 +135,19 @@ function timer(){
          matches = 0;
          started = 0;
     }
+}
+function restartAndSolve(){
+    var b = document.getElementById('restart');
+    b.style.opacity = '1';
+    var c = document.getElementById('solve');
+    c.style.opacity = '1';
+}
+
+function solve(){
+   for (var i = 1; i<=row*col; i++){
+       var name = 'cell-' + i;
+       var content = document.getElementById(name);
+       content.style.transform = "rotateY(180deg)"; 
+       matches = row*col/2;
+   }
 }
